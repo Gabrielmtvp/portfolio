@@ -1,0 +1,110 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 300 11px/1.4 'Helvetica-Neue', 'sans-serif';
+  color: #444;
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 999999999999999;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  background-color: #1d1d1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 9999;
+}
+
+#loading a {
+  min-height: 121px;
+}
+
+#loading div {
+  transition: all 2s ease-out;
+  min-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+  font-weight: 600px;
+  font-family: "Inter";
+  letter-spacing: 0.5;
+  background: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-animation: intro-gradient 10s infinite ease both;
+  -moz-animation: intro-gradient 10s infinite ease both;
+  animation: intro-gradient 10s infinite ease both;
+  -webkit-text-fill-color: transparent;
+}
+
+.animation {
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  width: 0% !important;
+  height: 0% !important;
+  display: none;
+}
+
+.animation div {
+  /* transition: all 1s ease-in-out;  */
+}
+
+#loading div::before {
+  background-image: url('../public/icon512.png');
+}
+
+.typewrite {
+  text-decoration: none; 
+}
+
+.wrap {
+  font-size: 5rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  color: white;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    font-size: 3rem;
+  }
+}
+
+:root {
+  --background: white;
+  --secondBackground: grey;
+  --text-primary: black;
+  --text-secondary: royalblue;
+  
+}
+
+[data-theme='dark'] {
+  --background: #1d1d1f;
+  --secondBackground: black;
+  --text-primary: #fff;
+  --text-secondary: royalblue;
+}

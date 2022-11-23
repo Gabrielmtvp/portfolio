@@ -1,0 +1,123 @@
+.projectContainer {
+    padding-bottom: 5rem;
+    background-color: var(--background);
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 420px;
+        margin-left: 10%;
+
+        p {
+            font-size: 3rem;
+            font-family: 'Inter';
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 8rem;
+            font-family: 'Inter';
+            font-weight: 600;
+            color: var(--text-primary);
+            width: 60%;
+            margin: 0;
+        }
+    }
+}
+
+.projects {
+    width: 80%;
+    margin: auto;
+}
+
+.customSlider{
+    width: 100%;
+    // background-image: url('../../assets/nomad.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    img {
+        height: 600px;
+    }
+
+    div {
+        position: absolute;
+        background-color: rgba(29, 29, 31, 0.275);
+        -webkit-backdrop-filter: saturate(180%) blur(3px);
+        backdrop-filter: saturate(180%) blur(3px);
+        border-top: 0.1px solid #3d3d3d;
+        height: 150px !important;
+        width: 100%;
+        color: var(--text-primary) !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+        font-family: "Inter";
+        letter-spacing: 0.5;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin: 0.5rem 0 !important;
+    }
+
+    p {
+        font-size: 1.5rem;
+        display: block;
+        overflow: hidden;
+        width:9%;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    a{
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--text-primary);
+    }
+}
+ 
+ .slick-slide div {
+    height:600px;
+ }
+
+$breakpoint-tablet: 900px;
+@media (max-width: $breakpoint-tablet) {
+
+    .projectContainer {
+        .description {
+    
+            p {
+                font-size: 2rem;
+            }
+    
+            h1{
+                font-size: 5rem;
+            }
+        }
+    }
+
+    .customSlider {
+        div {
+            height: 220px !important;
+        }
+
+        p {
+            width:10%;
+        }
+    }
+
+    .slick-slide div {
+        height:400px;
+     }
+
+}

@@ -1,0 +1,162 @@
+.home-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background);
+
+    .text-zone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10rem;
+    }
+
+    h1 {
+        color: var(--text-primary);
+        font-size: 8rem;
+        margin: 0;
+        font-family: 'Inter';
+        font-weight: 600;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+        background-image: linear-gradient(135deg,#ffb077,#b82698);
+    }
+}
+
+h2 {
+    color: #8d8d8d;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: 'Inter';
+    letter-spacing: 3px;
+    animation: fadeIn 1s 3.4s backwards;
+}
+
+.flat-button {
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-family: 'Inter';
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #4863f7;
+    margin-top: 25px;
+    float: left;
+    animation: fadeIn 6s 3s backwards;
+    white-space: nowrap;
+    margin-left: 10rem;
+
+    &:hover {
+        background: #4863f7;
+        color: #fff;
+    }
+}
+
+.divRowDown {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+}
+
+.divRowDown svg {
+    cursor: pointer;
+    position: absolute;
+    animation: MoveUpDown 1s linear infinite;
+    color: #fff;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 10px;
+    }
+}
+
+.divSocialIcons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 10rem;
+    
+    a {
+        color: white;
+    }
+
+    svg {
+        cursor: pointer;
+        padding-right: 6rem;
+    }
+
+    svg:hover {
+        color: white !important;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 1.4rem;
+    background-color: var(--background);
+    font-weight: 400;
+    min-height: 100px;
+
+    .footerIcons {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1rem;
+
+        svg {
+            color: #fff !important;
+
+        }
+    }
+}
+
+$breakpoint-tablet: 900px;
+@media (max-width: $breakpoint-tablet) {
+
+   .home-page {
+    
+        h1 {
+            font-size: 4rem;
+        }
+
+        .text-zone {
+            margin-left: 5rem;
+        }
+   }  
+
+   .flat-button {
+        font-size: 1rem;
+        margin-left: 5rem;
+   }
+
+   .divSocialIcons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 7rem;
+
+        svg {
+            padding-right: 1rem;
+        }
+
+   }
+
+}

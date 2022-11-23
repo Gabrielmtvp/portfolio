@@ -1,0 +1,146 @@
+$small: 400px;
+$medium: 900px;
+
+.nav-bar-hidden {
+  display: none;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    background-color: rgba(29, 29, 31, 0.7);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.1px solid #3d3d3d;
+    z-index: 99999999999;
+   
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-weight: 700;
+    color: #fff;;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        font-size: 14px;
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        font-family: 'Inter';
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin-right: 10rem;
+    }
+}
+
+input[type=checkbox]{
+  display: none;
+}
+
+$breakpoint-tablet: 900px;
+@media (max-width: $breakpoint-tablet) {
+    .nav-bar {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      right: 0;
+      display: none;
+      flex-direction: column;
+    
+    }
+
+    #menu-hamburguer:checked ~ div {
+      display: flex;
+      z-index: 99;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            font-size: 14px;
+            color: #fff;
+            display: block;
+            text-decoration: none;
+            font-family: 'Inter';
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            margin: 0 0 5rem 0;
+        }
+    }
+
+    .logo {
+      justify-content: center;   
+    }
+
+    .menu {
+      background: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      z-index: 999;
+    }
+      
+    .hamburguer {
+      position: relative;
+      display: block;
+      background: #000;
+      width: 30px;
+      height: 2px;
+      top: 29px;
+      left: 15px;
+      transition: 0.5s ease-in-out;
+    }
+
+    .hamburguer:before,
+    .hamburguer:after {
+      background: #000;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: 0.5s ease-in-out;
+    }
+
+    .hamburguer:before {
+      top: -10px;
+    }
+          
+    .hamburguer:after {
+      bottom: -10px;
+    }
+
+    input:checked ~ label .hamburguer {
+      transform: rotate(45deg);
+    }
+    
+    input:checked ~ label .hamburguer:before {
+      transform: rotate(90deg);
+      top: 0;
+    }
+    
+    input:checked ~ label .hamburguer:after {
+      transform: rotate(90deg);
+      bottom: 0;
+    }
+
+     
+}

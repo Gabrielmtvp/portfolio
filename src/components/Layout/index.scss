@@ -1,0 +1,19 @@
+.App {
+    width: 100%;
+    min-width: 10px;
+    height: 100vh;
+    margin: 0;
+
+    .buttonTheme {
+        width: 40px;
+        height: 40px;
+        background-color: #1d1d1f;
+        border: 1px solid rgba(155, 151, 151, 0.16);
+        color: black;
+        border-radius: 30px;
+        position: fixed;
+        bottom: 2%;
+        left: 1%;
+        z-index: 999999999999;
+    }
+}

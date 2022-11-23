@@ -1,0 +1,158 @@
+.containerContact {
+    background-color: var(--background);
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        height: 70vh;
+        cursor: pointer;
+    }
+ 
+    h4 {
+        font-size: 8rem;
+        background: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-animation: intro-gradient 10s infinite ease both;
+        -moz-animation: intro-gradient 10s infinite ease both;
+        animation: intro-gradient 10s infinite ease both;
+        -webkit-text-fill-color: transparent;
+        font-family: "Inter";
+        letter-spacing: 0.5;
+        margin: 0;
+    }
+
+    p {
+        font-size: 2rem;
+        background: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-animation: intro-gradient 10s infinite ease both;
+        -moz-animation: intro-gradient 10s infinite ease both;
+        animation: intro-gradient 10s infinite ease both;
+        -webkit-text-fill-color: transparent;
+        font-family: "Inter";
+        letter-spacing: 0.5;
+        font-weight: 600;
+    }
+
+}
+
+.formDialog{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 70%;
+
+        label {
+            color: #fff;
+            font-family: "Inter";
+            font-size: 1.5rem;
+            letter-spacing: 0.5;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        input {
+            height: 50px;
+            background-color: #1d1d1f;
+            border: 1px solid hsla(0,0%,51.4%,.16);
+            color: white;
+            border-radius: 10px;
+            font-size: 2rem;
+        }
+    }
+}
+
+.DialogFooter {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.DialogClose {
+    width: 40%;
+    height: 50px;
+    background-color: #1d1d1f;
+    border: 1px solid hsla(0,0%,51.4%,.16);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.DialogSubmit {
+    width: 40%;
+    height: 50px;
+    background-color: #ECA658;
+    border: 1px solid hsla(0,0%,51.4%,.16);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+  
+  .DialogContent {
+    position: fixed;
+    top: 1/2;
+    right: 1/2;
+    width: 60%;
+    height: 60%;
+    background: black;
+    border: 4px solid hsla(0,0%,51.4%,.16);
+    border-radius: 30px;
+    animation: fadeIn 0.3s linear;
+  }
+
+  .DialogOverlay {
+    background: rgba(0 0 0 / 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+  }
+
+$breakpoint-tablet: 900px;
+@media (max-width: $breakpoint-tablet) {
+
+    .containerContact {
+
+        h4 {
+            font-size: 6rem;
+        }
+    }
+
+    .DialogContent {
+        min-height: 400px;
+        position: fixed;
+        top: 1/2;
+        right: 1/2;
+        width: 100%;
+        height: 60%;
+        background: black;
+        border: 4px solid hsla(0,0%,51.4%,.16);
+        border-radius: 30px;
+        // padding: 30px;
+        // border-radius: 4px;
+      }
+}
