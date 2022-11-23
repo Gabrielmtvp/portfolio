@@ -5,7 +5,7 @@ import nextJs from '../../assets/images/nextjs.png'
 import graphQl from '../../assets/images/graphql.png'
 import mongoDb from '../../assets/images/mongodb.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import cell from '../../assets/cell.png'
+import cell from '../../assets/cell2.png'
 import { useState } from 'react'
 
 const Skills = () => {
