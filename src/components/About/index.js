@@ -33,7 +33,7 @@ const About = () => {
                                 Experience
                             </div>
                             <div className='r-projects'>
-                                3+ Projects
+                                100% dedicated
                             </div>
                             <div>
                                 <span className='r-x'>Self-Taught</span>

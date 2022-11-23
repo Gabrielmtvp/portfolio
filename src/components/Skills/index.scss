@@ -79,6 +79,7 @@
 
     .active {
         display: flex !important;
+        justify-content: center;
         flex-wrap: wrap;
         height: 100%;
         max-width: 480px;
@@ -89,6 +90,7 @@
 .activeImage3d {
     display: block;
     animation: fadeIn 1s linear;
+    z-index: 0;
     
     img {
         width: 400px;
@@ -108,12 +110,13 @@
     align-items: center;
     width: 16rem;
     height: 14rem;
-    background-color: var(--background);
+    // background-color: var(--background);
     transform: rotateX(-51deg) rotateZ(-0deg);
     transform-style: preserve-3d;
     border-radius: 32px;
     transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
-  
+    z-index: 0;
+
     &:hover {
       transform: translate3d(0px, -16px, 0px) rotateX(-51deg) rotateZ(-5deg);
     //   box-shadow: 1px 1px 0 1px , -1px 0 28px 0 black,

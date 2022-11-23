@@ -139,7 +139,8 @@ $breakpoint-tablet: 900px;
         grid-template-columns: 1fr;
 
         .right {
-            
+            grid-auto-rows: 0.3r 0.3fr !important;
+
             div {
                 font-size: 2rem;
             }
