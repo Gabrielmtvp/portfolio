@@ -5,7 +5,7 @@ const Timeline = () => {
         <section className='timelineContainer' id="timeline">
             <div className='descriptionTimeline'>
                 <p>Timeline</p>
-                <h1>Companies that I've been worked.</h1>
+                <h1>Companies that I've been experience.</h1>
             </div>
             <div class="flip flip-vertical">
                 <div class="front">

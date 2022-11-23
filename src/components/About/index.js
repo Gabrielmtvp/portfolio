@@ -21,7 +21,7 @@ const About = () => {
                             </span>
                             <br />
                             <span>
-                            I constantly keep myself up-to-date with the company technology that I am working on. For this I like reading and practicing new languages that appear in the market to bring to the user a better result and experience.
+                                I constantly keep myself up-to-date with the company technology that I am working on. For this I like reading and practicing new languages that appear in the market to bring to the user a better result and experience.
                             </span>
                         </div>
                         <div className='right'>
