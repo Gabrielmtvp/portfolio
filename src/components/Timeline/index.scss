@@ -1,3 +1,4 @@
+
 .timelineContainer {
     display: flex;
     justify-content: center;
@@ -33,82 +34,88 @@
    
 }
 
-// base
-.flip {
-    
-    >.front,
-    >.back {
-        display: block;
-        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
-        transition-duration: 1.0s;
-        transition-property: transform, opacity;
-    }
-    >.front {
-        transform: rotateY(0deg);
-        border: 2px solid hsla(0,0%,51.4%,.16);
-    }
-    >.back {
-        position: absolute;
-        opacity: 0;
-        top: 0px;
-        width: 100%;
-        transform: rotateY(-180deg);
-        box-shadow: inset 0 0 0 2px #006ddb;
-    }
-    &:hover {
-        >.front {
-            transform: rotateY(180deg);
-        }
-        >.back {
-            opacity: 1;
-            transform: rotateY(0deg);
-        }
-    }
-    &.flip-vertical {
-        >.back {
-            transform: rotateX(-180deg);
-        }
-        &:hover {
-            >.front {
-                transform: rotateX(180deg);
-            }
-            >.back {
-                transform: rotateX(0deg);
-            }
-        }
+.AccordionRoot {
+    border-radius: 6px;
+    width: 70%;
+}
+
+.AccordionItem {
+    overflow: hidden;
+    margin-top: 1px;
+}
+
+.AccordionTrigger {
+    width: 100%;
+    height: 80px;
+    font-family: "Inter";
+    font-weight: 600;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #fff;
+    background-color: #DF6A52;
+    border: none;
+    border-radius: 10px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
     }
 }
 
-// custom
-.flip {
-    position: relative;
-    display: inline-block;
-    margin-right: 2px;
-    margin-bottom: 2rem;
-    width: 900px;
-    >.front,
-    >.back {
-      display: block;
-      color: white;
-      width: inherit;
-      background-size: cover!important;
-      background-position: center!important;
-      padding: 1rem;
-      background: #313131;
-      border-radius: 10px;
-      p {
-        font-size: 1.5rem;   
-        letter-spacing: 0.5px;
-        font-family: "Inter";
-      }
-      h1 {
-        font-size: 2rem;
-        font-family: "Inter";
-        letter-spacing: 0.5px;
-      }
+.AccordionContent {
+    overflow: hidden;
+    font-size: 15px;
+    color: white;
+    // background-color: black;
+}
+
+.AccordionContent[data-state='open'] {
+    animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.AccordionContent[data-state='closed'] {
+    animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.AccordionContentText {
+    padding: 15px 20px;
+    font-family: "Inter";
+    font-size: 1.5rem;
+    letter-spacing: 0.5;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.AccordionChevron {
+    color: var(--violet10);
+    transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.AccordionTrigger[data-state='open'] > .AccordionChevron {
+    transform: rotate(180deg);
+}
+  
+@keyframes slideDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: var(--radix-accordion-content-height);
     }
 }
 
+@keyframes slideUp {
+    from {
+        height: var(--radix-accordion-content-height);
+    }
+    to {
+        height: 0;
+    }
+}
 
 $breakpoint-tablet: 900px;
 @media (max-width: $breakpoint-tablet) {
@@ -127,17 +134,8 @@ $breakpoint-tablet: 900px;
         }
     }
 
-    .flip {
-        width: 300px;
-        margin-bottom: 7rem;
-
-        >.front,
-        >.back {
-
-            p {
-                font-size: 1.2rem;
-            }
-        }
+    .AccordionTrigger {
+        font-size: 1rem;
     }
 
 }

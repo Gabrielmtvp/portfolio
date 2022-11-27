@@ -1,7 +1,13 @@
 import './index.scss'
 import * as Dialog from '@radix-ui/react-dialog'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+    const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+    const TEMPLATE_ID = process.env.REACT_APP_TEMPLADE_ID;
+    const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
     function handleSendRequest(event) {
         event.preventDefault();
@@ -16,7 +22,12 @@ const Contact = () => {
         }
 
         if(validation){
-            // nodemailer();
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
         }
     }
 
@@ -32,7 +43,8 @@ const Contact = () => {
                     <Dialog.Portal>
                         <Dialog.Overlay className="DialogOverlay">
                         <Dialog.Content className="DialogContent">
-                            <form onSubmit={handleSendRequest} className="formDialog">
+                            <Dialog.Title>Start a project request</Dialog.Title>
+                            <form ref={form} onSubmit={handleSendRequest} className="formDialog">
                                 <div className='groupInput'>
                                     <label>Name</label>
                                     <input type="text" name="name" id="name" />
@@ -43,7 +55,7 @@ const Contact = () => {
                                 </div>
                                 <div className='groupInput'>
                                     <label>Description</label>
-                                    <input type="text" name="description" id="description" />
+                                    <textarea  name="description" id="description" />
                                 </div>
                                 <footer className="DialogFooter">
                                     <Dialog.Close 

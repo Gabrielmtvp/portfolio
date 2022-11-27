@@ -98,7 +98,7 @@ body {
   --background: white;
   --secondBackground: grey;
   --text-primary: black;
-  --text-secondary: royalblue;
+  --text-secondary: white;
   
 }
 
@@ -106,5 +106,5 @@ body {
   --background: #1d1d1f;
   --secondBackground: black;
   --text-primary: #fff;
-  --text-secondary: royalblue;
+  --text-secondary: white;
 }
