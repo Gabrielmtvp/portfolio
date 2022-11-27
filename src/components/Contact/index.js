@@ -1,7 +1,9 @@
 import './index.scss'
 import * as Dialog from '@radix-ui/react-dialog'
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
     const form = useRef();
@@ -11,24 +13,21 @@ const Contact = () => {
 
     function handleSendRequest(event) {
         event.preventDefault();
-        let validation = true;
 
-        const formData = new FormData(event.currentTarget);
-        for (let [key, value] of formData.entries()) {
-          console.log(key, value);
-          if(value === ""){
-            validation = false;
-          }
-        }
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+        .then((result) => {
+            console.log(result.text);
+            if(result.text == "OK"){
+                document.getElementById('modalSuccess').className = 'modalSuccess';
 
-        if(validation){
-            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-        }
+                setTimeout(() => {
+                    document.getElementById('main_form').reset();
+                    document.getElementById('modalSuccess').className = 'modalSuccessHidden';
+                }, 3000);
+            }
+        }, (error) => {
+            console.log(error.text);
+        });
     }
 
     return (
@@ -44,18 +43,18 @@ const Contact = () => {
                         <Dialog.Overlay className="DialogOverlay">
                         <Dialog.Content className="DialogContent">
                             <Dialog.Title>Start a project request</Dialog.Title>
-                            <form ref={form} onSubmit={handleSendRequest} className="formDialog">
+                            <form ref={form} onSubmit={handleSendRequest} id="main_form" className="formDialog">
                                 <div className='groupInput'>
-                                    <label>Name</label>
-                                    <input type="text" name="name" id="name" />
+                                    <label>Name *</label>
+                                    <input type="text" name="name" id="name" required />
                                 </div>
                                 <div className='groupInput'>
-                                    <label>Email</label>
-                                    <input type="text" name="email" id="email" />
+                                    <label>Email *</label>
+                                    <input type="text" name="email" id="email" required />
                                 </div>
                                 <div className='groupInput'>
-                                    <label>Description</label>
-                                    <textarea  name="description" id="description" />
+                                    <label>Description *</label>
+                                    <textarea rows={4} name="description" id="description" required />
                                 </div>
                                 <footer className="DialogFooter">
                                     <Dialog.Close 
@@ -76,6 +75,10 @@ const Contact = () => {
                         </Dialog.Overlay>
                     </Dialog.Portal>
                 </Dialog.Root>
+            </div>
+            <div className='modalSuccessHidden' id="modalSuccess">
+                <h1>Email send with success!</h1>
+                <FontAwesomeIcon icon={faCheck} size="3x" style={{color:"green"}} />
             </div>
         </section>
     )
