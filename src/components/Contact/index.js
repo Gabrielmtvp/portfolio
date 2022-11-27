@@ -3,21 +3,24 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
     const form = useRef();
     const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
     const TEMPLATE_ID = process.env.REACT_APP_TEMPLADE_ID;
     const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
+    const [loading, setLoading] = useState(false);
 
     function handleSendRequest(event) {
         event.preventDefault();
+        setLoading(true);
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
         .then((result) => {
             console.log(result.text);
             if(result.text == "OK"){
+                setLoading(false);
                 document.getElementById('modalSuccess').className = 'modalSuccess';
 
                 setTimeout(() => {
@@ -77,9 +80,19 @@ const Contact = () => {
                 </Dialog.Root>
             </div>
             <div className='modalSuccessHidden' id="modalSuccess">
-                <h1>Email send with success!</h1>
+                <h1>Email sent with success!</h1>
                 <FontAwesomeIcon icon={faCheck} size="3x" style={{color:"green"}} />
             </div>
+            {
+                loading 
+                ?
+                    <div className='loading'>
+                        <FontAwesomeIcon icon={faSpinner} size="3x" className="spinner" />
+                        <h1>Loading...</h1>
+                    </div>
+                : 
+                ''
+            }
         </section>
     )
 }
