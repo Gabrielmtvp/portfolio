@@ -35,7 +35,7 @@ const Contact = () => {
 
     return (
         <section className='containerContact' id="contact">
-            <div>
+            <div data-aos="fade-right">
                 <h4>Interested in working with me?</h4>
                 
                 <Dialog.Root>

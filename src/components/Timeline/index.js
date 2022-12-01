@@ -31,7 +31,7 @@ const Timeline = () => {
 
     return (
         <section className='timelineContainer' id="timeline">
-            <div className='descriptionTimeline'>
+            <div className='descriptionTimeline' data-aos="fade-right">
                 <p>Timeline</p>
                 <h1>Companies that I've been experience.</h1>
             </div>
@@ -58,7 +58,7 @@ In different cases I had to learn new languages, methods and external API's to i
                 </div>
             </div> */}
 
-            <Accordion.Root className="AccordionRoot" type="single" defaultValue="item-1" collapsible>
+            <Accordion.Root className="AccordionRoot" type="single" defaultValue="item-1" collapsible data-aos="fade-left">
                 <Accordion.Item className="AccordionItem" value="item-1">
                     <AccordionTrigger className='AccordionTrigger'>
                         <div>

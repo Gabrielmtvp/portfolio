@@ -14,11 +14,11 @@ const Skills = () => {
     
     return (
         <section className="container-skills" id="skills">
-            <div className='description'>
+            <div className='description' data-aos="fade-right">
                 <h1>Skills that I have to ignite your project.</h1>
             </div>
 
-            <div className='skills'>
+            <div className='skills' data-aos="zoom-in">
                 <div className={`${txtButton === "frontend" ? 'activeImage3d' : 'hiddenImage3d'}`}>
                     <img src={cell}  />
                 </div>

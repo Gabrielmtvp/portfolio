@@ -31,12 +31,12 @@ const Projects = () => {
 
     return (
         <section className='projectContainer' id="projects">
-             <div className='description'>
+             <div className='description' data-aos="fade-in">
                     <p>Projects</p>
                     <h1>A small selection of my projects.</h1>
                 </div>
 
-                <div className='projects'>
+                <div className='projects' data-aos="fade-in">
                     <Slider {...settings}>
                         <CustomSlider 
                             img="https://imgur.com/smhbZXM.png"

@@ -4,11 +4,11 @@ const About = () => {
     return (
         <>
             <section className='about' id="about">
-                <div className='description'>
+                <div className='description' data-aos="fade-right">
                     <p>Let's</p>
                     <h1>Dream a little bigger.</h1>
                 </div>
-                <div className='containerNumbers'>
+                <div className='containerNumbers' data-aos="fade-in">
                     <div className='grid-container'>
                         <div className='left'>
                             <h2>About me</h2>

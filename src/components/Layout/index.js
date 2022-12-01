@@ -5,6 +5,10 @@ import useLocalStorage from 'use-local-storage'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init();
 
 const Layout = () => {
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
