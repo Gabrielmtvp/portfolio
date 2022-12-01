@@ -58,7 +58,7 @@ In different cases I had to learn new languages, methods and external API's to i
                 </div>
             </div> */}
 
-            <Accordion.Root className="AccordionRoot" type="single" defaultValue="item-1" collapsible data-aos="fade-left">
+            <Accordion.Root className="AccordionRoot" type="single" defaultValue="item-1" collapsible data-aos="fade-right">
                 <Accordion.Item className="AccordionItem" value="item-1">
                     <AccordionTrigger className='AccordionTrigger'>
                         <div>
