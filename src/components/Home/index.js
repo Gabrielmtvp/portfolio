@@ -58,13 +58,9 @@ const Home = () => {
             </section>
 
             <About />
-
             <Skills />
-
             <Projects />
-
             <Timeline />
-
             <Contact />
 
             <section className='footer'>
@@ -83,7 +79,6 @@ const Home = () => {
                     © 2022 Gabriel Gomes Pacheco. All rights reserved.
                 </div>
             </section>
-            
         </>
     )
 }
