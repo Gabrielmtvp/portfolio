@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CustomSlider = (props) => {
-    
     return (
         <div className="customSlider" key={props.title}>
             <img src={props.img} alt="img" />
@@ -37,7 +36,7 @@ const Projects = () => {
                 </div>
 
                 <div className='projects' data-aos="fade-in">
-                    <Slider {...settings}>
+                    {/* <Slider {...settings}>
                         <CustomSlider 
                             img="https://imgur.com/smhbZXM.png"
                             title="GabrielDev Portfolio"    
@@ -57,7 +56,35 @@ const Projects = () => {
                             description="The ideia of the FindYourDuoApp is approximate the gamers around the world and bring one way to find themselves and them play together."
                             linkGitHub="https://github.com/Gabrielmtvp/Project-FindYourDuoApp"
                         />
-                    </Slider>
+                    </Slider> */}
+                    <div className="container-cards">
+                        <div class="card card-1">
+                        </div>
+                        <div className="card-description">
+                            <h2>JobsCalc</h2>
+                            <p>JobsCalc is a calculation estimation application for freelance projects, where it is possible to register and exclude jobs (projects), obtaining a cost estimate for each job.
+                                In addition, it is possible to plot the hourly value of the person who will be using the system 💰</p>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+                    <div className="container-cards">
+                        <div class="card card-2">
+                        </div>
+                        <div className="card-description">
+                            <h2>FindYourDuoApp</h2>
+                            <p>The ideia of the FindYourDuoApp is approximate the gamers around the world and bring one way to find themselves and them play together.</p>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+                    <div className="container-cards">
+                        <div class="card card-3">
+                        </div>
+                        <div className="card-description">
+                            <h2>GabrielDev Portfolio</h2>
+                            <p>Portfolio that was built by me that the main objective is show my skills and explain more about my carrear and experience.</p>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
                 </div>
         </section>
     )

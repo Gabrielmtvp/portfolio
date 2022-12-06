@@ -31,6 +31,29 @@
 .projects {
     width: 80%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    .container-cards{
+        display: flex;
+    }
+}
+
+.card-description {
+    
+    h2 {
+        font-size: 3.2vw;
+        font-family: "Inter";
+        letter-spacing: 0.5;
+        color: white;
+    }
+
+    p {
+        font-size: 2rem;
+        font-family: "Inter";
+        letter-spacing: 0.5;
+        color: #fff;
+    }
 }
 
 .customSlider{
@@ -90,6 +113,61 @@
     height:600px;
  }
 
+
+ .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    margin: 20px;
+    padding: 20px;
+    min-width: 400px;
+    min-height: 250px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+  /* CARD BACKGROUNDS */
+  
+  .card-1 {
+    background-image: url('https://raw.githubusercontent.com/Gabrielmtvp/Project-JobsCalc-Node-Ejs/master/.github/jobscalc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 5px 2px #282a2d;
+    background-color: #cccccc;
+  }
+  
+  .card-2 {
+    background-image: url('https://camo.githubusercontent.com/5b9fb788ede1a5f8173383758861fe872dc0796e9ebba536d42bf5f4d743abdd/68747470733a2f2f696d6775722e636f6d2f4b4931685548592e706e67');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 5px 2px #282a2d;
+    background-color: #cccccc;
+  }
+  
+  .card-3 {
+    background-image: url('https://imgur.com/smhbZXM.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 5px 2px #282a2d;
+    background-color: #cccccc;
+  }
+
+
 $breakpoint-tablet: 900px;
 @media (max-width: $breakpoint-tablet) {
 
@@ -119,5 +197,21 @@ $breakpoint-tablet: 900px;
     .slick-slide div {
         height:400px;
      }
+    
+    .container-cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        min-width: 250px;
+        min-height: 100px;
+    }
+
+    .card-description {
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
 
 }
