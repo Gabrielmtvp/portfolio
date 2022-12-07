@@ -72,7 +72,6 @@
     overflow: hidden;
     font-size: 15px;
     color: white;
-    // background-color: black;
 }
 
 .AccordionContent[data-state='open'] {
@@ -121,9 +120,7 @@ $breakpoint-tablet: 900px;
 @media (max-width: $breakpoint-tablet) {
 
     .timelineContainer {
-
         .descriptionTimeline {
-    
             p {
                 font-size: 2rem;
             }
@@ -137,5 +134,4 @@ $breakpoint-tablet: 900px;
     .AccordionTrigger {
         font-size: 1rem;
     }
-
 }
