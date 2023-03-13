@@ -62,13 +62,23 @@ In different cases I had to learn new languages, methods and external API's to i
                 <Accordion.Item className="AccordionItem" value="item-1">
                     <AccordionTrigger className='AccordionTrigger'>
                         <div>
+                            <h1 class="text-shadow">FullStack Developer, Kanon Gaming</h1>
+                            <p>MAR 2023 - PRESENT</p>
+                        </div>
+                    </AccordionTrigger>
+                    <AccordionContent className='AccordionContent'>iGaming company that offers Casino & Lotto products.
+                        As FullStack Developer I have to create and maintenance features related to Cassino Industry using different programming languages.</AccordionContent>
+                </Accordion.Item>
+                <Accordion.Item className="AccordionItem" value="item-2">
+                    <AccordionTrigger className='AccordionTrigger'>
+                        <div>
                             <h1 class="text-shadow">Software Engineer, ClusterStack</h1>
-                            <p>JUN 2022 - Present</p>
+                            <p>JUN 2022 - FEB 2023</p>
                         </div>
                     </AccordionTrigger>
                     <AccordionContent className='AccordionContent'>As Software Engineer I'm working to help the company build a system that have as mainly idea bring more information and opportunities to the person that want immigrate to another country.</AccordionContent>
                 </Accordion.Item>
-                <Accordion.Item className="AccordionItem" value="item-2">
+                <Accordion.Item className="AccordionItem" value="item-3">
                     <AccordionTrigger className='AccordionTrigger'>
                         <div>
                             <h1 class="text-shadow">Java Software Engineer, Freedom System</h1>
