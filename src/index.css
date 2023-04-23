@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: 300 11px/1.4 'Helvetica-Neue', 'sans-serif';
+  font-family: 300 11px/1.4 "Helvetica-Neue", "sans-serif";
   color: #444;
   background: var(--background);
   -webkit-font-smoothing: antialiased;
@@ -26,8 +26,8 @@ body {
   align-items: center;
   font-size: 10rem;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: 9999;
 }
 
@@ -43,11 +43,33 @@ body {
   align-items: center;
   border-radius: 20px;
   border: 2px solid;
-  border-color: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+  border-color: linear-gradient(
+    91.36deg,
+    #eca658 0%,
+    #f391a6 13.02%,
+    #e188c3 25.52%,
+    #a58de3 37.5%,
+    #56abec 49.48%,
+    #737eb7 63.02%,
+    #c8638c 72.92%,
+    #dd5d57 84.38%,
+    #df6c51 97.92%
+  );
   font-weight: 600px;
   font-family: "Inter";
   letter-spacing: 0.5;
-  background: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+  background: linear-gradient(
+    91.36deg,
+    #eca658 0%,
+    #f391a6 13.02%,
+    #e188c3 25.52%,
+    #a58de3 37.5%,
+    #56abec 49.48%,
+    #737eb7 63.02%,
+    #c8638c 72.92%,
+    #dd5d57 84.38%,
+    #df6c51 97.92%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -70,11 +92,11 @@ body {
 }
 
 #loading div::before {
-  background-image: url('../public/icon512.png');
+  background-image: url("../public/icon512.png");
 }
 
 .typewrite {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .wrap {
@@ -82,7 +104,7 @@ body {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  letter-spacing: 0.15em; /* Adjust as needed */
   color: white;
   font-family: "Inter";
   font-weight: 600;
@@ -95,16 +117,21 @@ body {
 }
 
 :root {
-  --background: white;
-  --secondBackground: grey;
-  --text-primary: black;
-  --text-secondary: white;
-  
+  --background: #ff6b6b4a;
+  --secondBackground: #ff6b6b4a;
+  --skillBackground: #ddab938a;
+
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+  --text-green: #000000;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --background: #1d1d1f;
-  --secondBackground: black;
-  --text-primary: #fff;
+  --secondBackground: #000000;
+  --skillBackground: #1d1d1f;
+
+  --text-primary: #ffffff;
   --text-secondary: white;
+  --text-green: #04d361;
 }

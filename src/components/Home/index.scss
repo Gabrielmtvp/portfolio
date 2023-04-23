@@ -64,13 +64,14 @@ h2 {
     position: absolute;
     bottom: 0;
     margin-bottom: 2rem;
+    
 }
 
 .divRowDown svg {
     cursor: pointer;
     position: absolute;
     animation: MoveUpDown 1s linear infinite;
-    color: var(--text-primary);
+    color: var(--text-green);
 }
 
 @keyframes MoveUpDown {
