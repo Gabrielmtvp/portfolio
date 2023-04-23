@@ -13,7 +13,7 @@ const About = () => {
                         <div className='left'>
                             <h2>About me</h2>
                             <span>
-                                I was born in Joinville, Santa Catarina, Brazil, and currently living in Dublin, Ireland. I start learn coding at 2011 where I had the first contact and since then I knew that was I would like to work in the future.
+                                I was born in Joinville, Santa Catarina, Brazil, and currently living in Malta. I start learn coding at 2011 where I had the first contact and since then I knew that was I would like to work in the future.
                             </span>
                             <br />
                             <span>
