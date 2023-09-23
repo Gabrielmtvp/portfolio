@@ -127,7 +127,7 @@
     }
 }
 
-$breakpoint-tablet: 900px;
+$breakpoint-tablet: 425px;
 @media (max-width: $breakpoint-tablet) {
     .containerPanelsSkills {
         .buttonsSkills {
@@ -142,7 +142,7 @@ $breakpoint-tablet: 900px;
 
     .activeImage3d {
         img {
-            width: 200px;
+            width: 155px;
             height: 200px;
     
         }
