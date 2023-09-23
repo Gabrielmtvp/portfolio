@@ -117,19 +117,19 @@ body {
 }
 
 :root {
-  --background: #ff6b6b4a;
-  --secondBackground: #ff6b6b4a;
-  --skillBackground: #ddab938a;
+  --background: #ffffff;
+  --secondBackground: #ffffff;
 
   --text-primary: #000000;
   --text-secondary: #ffffff;
   --text-green: #000000;
+
+  --blue-color: #4863f7;
 }
 
 [data-theme="dark"] {
   --background: #1d1d1f;
   --secondBackground: #000000;
-  --skillBackground: #1d1d1f;
 
   --text-primary: #ffffff;
   --text-secondary: white;

@@ -1,11 +1,11 @@
 .about {
     width: 100%;
-    background-color: var(--secondBackground);
+    background-color: var(--background);
     background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/6743.jpg');
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-bottom: 10rem;
+    padding-bottom: 10rem;  
 
     .description {
         display: flex;
@@ -99,16 +99,15 @@
             .r-x {
                 background-image: linear-gradient(135deg,#63e3dc,#1254c2);
             }
-        }
 
-        .r-experience {
-            background-image: linear-gradient(135deg,#ffb077,#b82698); 
-        }
+            .r-experience {
+                background-image: linear-gradient(135deg,#ffb077,#b82698); 
+            }
 
-        .r-projects {
-            background-image: linear-gradient(225deg,#5af141,#2a9dce);
+            .r-projects {
+                background-image: linear-gradient(225deg,#93d9f7,#2a9dce);
+            }
         }
-       
     }
 }
 

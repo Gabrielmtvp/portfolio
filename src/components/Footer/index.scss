@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    font-family: "Inter";
+    font-size: 1.4rem;
+    background-color: var(--background);
+    font-weight: 400;
+    min-height: 100px;
+
+    .footerIcons {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1rem;
+
+        svg {
+            color: var(--text-primary) !important;
+
+        }
+    }
+}
