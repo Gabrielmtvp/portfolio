@@ -11,98 +11,24 @@
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <title>GabrielDev Portfolio</title>
   </head>
-  <body onload="removeLoader();">
+  <body onload="loadNavBar();">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
-    <div id='loading'>
-      <div>
-        <a href="" class="typewrite" data-period="85" data-type='[ "Frontend Developer", "Backend Developer", "Specialist" ]'>
-          <span class="wrap"></span>
-        </a>
-      </div>
-    </div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 
   <script>
-    function removeLoader(){  
-      setTimeout(()=>{
-        let loader = document.getElementById('loading');
-        loader.className = 'animation';
-        let navbar = document.getElementById('nav-bar');
-        navbar.className = "nav-bar";
-      },
-      4300);  
+    function loadNavBar() {
+      let navbar = document.getElementById("nav-bar");
+      navbar.className = "nav-bar";
     }
-
-    var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 200;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap" style="min-height:121px;">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 350;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 100;
-        }
-
-        setTimeout(function() {
-          that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-
-        removeLoader();
-    };
   </script>
 </html>

@@ -1,149 +1,136 @@
 .about {
-    width: 100%;
-    background-color: var(--background);
-    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/6743.jpg');
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-bottom: 10rem;  
+  width: 100%;
+  background-color: var(--background);
+  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/6743.jpg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 10rem;
 
-    .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 420px;
-        margin-left: 10%;
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 420px;
+    margin-left: 10%;
 
-        p {
-            font-size: 3rem;
-            font-family: 'Inter';
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 0;
-        }
-
-        h1 {
-            font-size: 8rem;
-            font-family: 'Inter';
-            font-weight: 600;
-            color: var(--text-primary);
-            width: 60%;
-            margin: 0;
-        }
+    p {
+      font-size: 3rem;
+      font-family: "Inter";
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
     }
+
+    h1 {
+      font-family: "Inter";
+      font-weight: 600;
+      color: var(--text-primary);
+      width: 60%;
+      margin: 0;
+    }
+  }
 }
 
 .containerNumbers {
-    margin: 0 28px;
+  margin: 0 28px;
 }
 
 .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 28px;
+  min-height: 500px;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background);
+    border: 1px solid hsla(0, 0%, 51.4%, 0.16);
+    border-radius: 28px;
+    font-family: "Inter";
+    padding: 43px;
+
+    span {
+      font-size: 2rem;
+      color: var(--text-primary);
+    }
+  }
+
+  .right {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 28px;
-    min-height: 500px;
+    row-gap: 10px;
 
-    .left {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: var(--background);
-        border: 1px solid hsla(0,0%,51.4%,.16);
-        border-radius: 28px;
-        font-family: 'Inter';
-        padding: 43px;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: var(--background);
+      border: 1px solid hsla(0, 0%, 51.4%, 0.16);
+      border-radius: 28px;
+      font-size: 4rem;
+      font-weight: 600;
+      font-family: "Inter";
 
-        h2 {
-            color: var(--text-primary);
-            font-size: 3rem;
-        }
+      span {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-        span {
-            font-size: 2rem;
-            color: var(--text-primary);
-        }
+      .r-passion {
+        background-image: linear-gradient(
+          0deg,
+          rgba(34, 193, 195, 1) 0%,
+          rgba(253, 187, 45, 1) 100%
+        );
+      }
+
+      .r-x {
+        background-image: linear-gradient(135deg, #63e3dc, #1254c2);
+      }
+
+      .r-experience {
+        background-image: linear-gradient(135deg, #ffb077, #b82698);
+      }
+
+      .r-projects {
+        background-image: linear-gradient(225deg, #93d9f7, #2a9dce);
+      }
     }
-    
-    .right {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 10px;
-        column-gap: 20px;
-        grid-auto-rows: 1fr 1fr;
-
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: var(--background);
-            border: 1px solid hsla(0,0%,51.4%,.16);
-            border-radius: 28px;
-            
-            font-size: 4rem;
-            font-weight: 600;
-            font-family: 'Inter'; 
-
-            span {
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;  
-            }
-            
-            .r-passion {
-                background-image: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-            }
-
-            .r-x {
-                background-image: linear-gradient(135deg,#63e3dc,#1254c2);
-            }
-
-            .r-experience {
-                background-image: linear-gradient(135deg,#ffb077,#b82698); 
-            }
-
-            .r-projects {
-                background-image: linear-gradient(225deg,#93d9f7,#2a9dce);
-            }
-        }
-    }
+  }
 }
 
 $breakpoint-tablet: 900px;
 @media (max-width: $breakpoint-tablet) {
-
-    .about {
-        background-size: auto;
-        .description {
-    
-            p {
-                font-size: 2rem;
-            }
-    
-            h1{
-                font-size: 5rem;
-            }
-        }
+  .about {
+    background-size: auto;
+    .description {
+      p {
+        font-size: 2rem;
+      }
     }
+  }
 
-    .containerNumbers {
-        min-height: 400px;
+  .containerNumbers {
+    min-height: 400px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-auto-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    .right {
+      grid-auto-rows: 0.3r 0.3fr !important;
+
+      div {
+        font-size: 2rem;
+      }
     }
-
-    .grid-container {
-        display: grid;
-        grid-auto-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-
-        .right {
-            grid-auto-rows: 0.3r 0.3fr !important;
-
-            div {
-                font-size: 2rem;
-            }
-        }
-    }    
-
+  }
 }

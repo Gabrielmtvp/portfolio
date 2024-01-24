@@ -14,9 +14,15 @@ const Start = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
   const nameArray = ["G", "a", "b", "r", "i", "e", "l"];
   const jobArray = [
-    "w",
-    "e",
-    "b",
+    "f",
+    "u",
+    "l",
+    "l",
+    "s",
+    "t",
+    "a",
+    "c",
+    "k",
     "_",
     "d",
     "e",
@@ -27,13 +33,10 @@ const Start = () => {
     "p",
     "e",
     "r",
-    ".",
   ];
 
   useEffect(() => {
-    setTimeout(() => {
-      setLetterClass("text-animate-hover");
-    }, 4000);
+    setLetterClass("text-animate-hover");
   }, []);
   return (
     <section className="home-page">
@@ -56,12 +59,14 @@ const Start = () => {
             idx={22}
           />
         </h1>
-        <h2>FullStack Developer / Javascript Expert</h2>
+        <p>FullStack Developer / Javascript Expert</p>
       </div>
-      <div>
-        <a href="#contact" className="flat-button">
-          START A PROJECT REQUEST
-        </a>
+      <div className="btn-project-request">
+        <p>
+          <a href="#contact" className="link-project-request">
+            START A PROJECT REQUEST
+          </a>
+        </p>
       </div>
       <div className="divSocialIcons">
         <div>

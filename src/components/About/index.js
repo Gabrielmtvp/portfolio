@@ -36,13 +36,13 @@ const About = () => {
                 <span className="r-passion">Passion</span>
               </div>
               <div>
-                <span className="r-experience">7+ Years Experience</span>
-              </div>
-              <div>
                 <span className="r-projects">Dedicated</span>
               </div>
               <div>
                 <span className="r-x">Self-Taught</span>
+              </div>
+              <div>
+                <span className="r-experience">7+ Years Experience</span>
               </div>
             </div>
           </div>
